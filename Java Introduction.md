@@ -1,5 +1,5 @@
 <div style='text-align: justify;'>
-# <p align="center"> Java Introduction </p> 
+#<p align="center"> Java Introduction </p> 
 
 ## JDK structure
 ***The Java Development Kit (JDK)*** is a cross-platformed software development environment that offers a collection of tools and libraries necessary for developing Java-based software applications and applets. It is a core package used in Java, along with the JVM (Java Virtual Machine) and the JRE (Java Runtime Environment). 
