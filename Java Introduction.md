@@ -6,9 +6,9 @@
 
 ***ClassLoader*** Java ClassLoader dynamically loads all the classes necessary to run a Java program. Because classes are only loaded into memory whenever they are needed, the JRE uses ClassLoader will automate this process when needed. 
 1. Loading: During the initialization of the JVM, three ClassLoaders are loaded:
-  * Bootstrap class loader: also called as the Primordial ClassLoader, mainly responsible for loading JDK internal classes. Because ClassLoaders is classes themself, Bootstrap class loader is not a java class and its job is to load the first pure Java ClassLoader.
-  * Extensions class loader: a child of Bootstrap ClassLoader and loads the extensions of core java classes from the Extension library
-  * System class loader: a child class of Extension ClassLoader that loads the files present on the classpath.
+   * Bootstrap class loader: also called as the Primordial ClassLoader, mainly responsible for loading JDK internal classes. Because ClassLoaders is classes themself, Bootstrap class loader is not a java class and its job is to load the first pure Java ClassLoader.
+   * Extensions class loader: a child of Bootstrap ClassLoader and loads the extensions of core java classes from the Extension library
+   * System class loader: a child class of Extension ClassLoader that loads the files present on the classpath.
 2. Linking: 
    * First, checks the structural correctness of the class file by checking it against a set of constraints or rules.
    * Then the JVM allocates memory for the static fields of a class or interface, and initializes them with default values.
