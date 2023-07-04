@@ -1,5 +1,3 @@
-<p align="justify"> Your Text 
-
 # <p align="center"> Java Introduction </p> 
  
 ## JDK structure
@@ -44,5 +42,3 @@ Usually with other programming languages, the program is compiled into machine c
 ***Question 1.1: Is Java an independent platform?***
 
 Yes, because Java programs only need to compile once but can run anywhere, regardless of platform, as long as they have JVM installed. A Java program is not compiled directly to machine code, but it is compiled to bytecode, which is then converted to machine code by the JVM. Therefore, when using another machine, only JVM converts the bytecode to that other machine code to get the desired output.
-
-</p>
