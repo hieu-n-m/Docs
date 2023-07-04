@@ -1,5 +1,7 @@
+<div style="text-align: justify">
 # <p align="center"> Java Introduction </p> 
 
+## JDK structure
 ***The Java Development Kit (JDK)*** is a cross-platformed software development environment that offers a collection of tools and libraries necessary for developing Java-based software applications and applets. It is a core package used in Java, along with the JVM (Java Virtual Machine) and the JRE (Java Runtime Environment). 
 
 ***Java Runtime Environment (JRE)*** is an open-access software distribution that has a Java class library, specific tools, and a separate JVM. JRE acts as a software layer on top of the operating system.
@@ -33,7 +35,7 @@
 
 ***Native Method Libraries*** libraries that are written in other programming language are loaded through JNI.
 
-# Question
+## Question
 ***Question 1: Why are Java applications called “write once run everywhere”?***
 
 Usually with other programming languages, the program is compiled into machine code, depending on the hardware and operating system. At that time, if you switch to another machine, you will have to recompile from scratch if you don't want to get errors. In Java, the program is not compiled directly to machine code, instead it is bytecode. This bytecode is then converted to machine code by the JVM. That means that a program that needs to be compiled only once to bytecode can run on any machine as long as they have a JVM installed.
@@ -41,3 +43,5 @@ Usually with other programming languages, the program is compiled into machine c
 ***Question 1.1: Is Java an independent platform?***
 
 Yes, because Java programs only need to compile once but can run anywhere, regardless of platform, as long as they have JVM installed. A Java program is not compiled directly to machine code, but it is compiled to bytecode, which is then converted to machine code by the JVM. Therefore, when using another machine, only JVM converts the bytecode to that other machine code to get the desired output.
+
+</div>
