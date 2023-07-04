@@ -1,7 +1,7 @@
-# <p align="center"> Java Introduction </p> 
+<p align="justify"> Your Text </p>
 
-<div style='text-align: justify;'>
-  
+# <p align="center"> Java Introduction </p> 
+ 
 ## JDK structure
 ***The Java Development Kit (JDK)*** is a cross-platformed software development environment that offers a collection of tools and libraries necessary for developing Java-based software applications and applets. It is a core package used in Java, along with the JVM (Java Virtual Machine) and the JRE (Java Runtime Environment). 
 
@@ -45,4 +45,3 @@ Usually with other programming languages, the program is compiled into machine c
 
 Yes, because Java programs only need to compile once but can run anywhere, regardless of platform, as long as they have JVM installed. A Java program is not compiled directly to machine code, but it is compiled to bytecode, which is then converted to machine code by the JVM. Therefore, when using another machine, only JVM converts the bytecode to that other machine code to get the desired output.
 
-</div>
