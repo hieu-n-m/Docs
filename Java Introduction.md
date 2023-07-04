@@ -1,4 +1,4 @@
-<div style="text-align: justify">
+<div style='text-align: justify;'>
 # <p align="center"> Java Introduction </p> 
 
 ## JDK structure
