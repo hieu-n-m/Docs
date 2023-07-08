@@ -1,6 +1,10 @@
 # <p align="center"> Java Variables and Data Types </p> 
 
 ***The Java variables*** have mainly 3 types: *Local*, *Instance*, *Static*. To use a variable, you need to do 2 steps: *declare* and *initialize*.
+```java
+int count = 100;
+```
+
 * Local variables are declared inside body of a method
 * Instance variables are declared without static keyword and outside a method declaration.
 * Static variables are declared only once with static keyword and initialized before any instance variable at the start of the program execution.
