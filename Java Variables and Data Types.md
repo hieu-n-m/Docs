@@ -7,7 +7,8 @@ int count = 100;
 * Local variables are declared inside body of a method
 * Instance variables are declared without static keyword and outside a method declaration.
 * Static variables are declared only once with static keyword and initialized before any instance variable at the start of the program execution.
-Examples,
+
+For example,
 ```java
 class Variables_demo {
     int var1 = 0;
@@ -31,14 +32,21 @@ public class Main {
     }
 }
 ```
-In this example, Local variables are `var8`, `var9`, `var10`, `var11`, `var12`, `var13`; Instance variables are `var1`, `var2`, `var3`, `var4`; Static variables are `var5`, `var6`, `var7`.   
+local variables are `var8`, `var9`, `var10`, `var11`, `var12`, `var13`; instance variables are `var1`, `var2`, `var3`, `var4`; static variables are `var5`, `var6`, `var7`.   
 
 ***Data Types*** are defined as specifiers which allocate different sizes and types of values that can be stored in a variable. There are 2 parts of Data Type:
-* Primitive: include 8 built-in data types. When a primitive data type is stored, it is the stack that the values will be assigned. When a variable is copied then another copy of the variable is created and changes made to the copied variable will not reflect changes in the original variable. Primitive datatypes do not have null as default value
-* Non-primitive: created by the users in Java. When the reference variables will be stored, the variable will be stored in the stack and the original object will be stored in the heap. In Object data type, although two copies will be created, they both will point to the same variable in the heap, hence changes made to any variable will reflect the change in both the variables. The default value for the reference variable is null
+* Primitive: include 8 built-in data types: `byte` (1 byte), `short` (2 byte), `int` (4 byte), `long` (8 byte), `char` (2 byte), `float` (4 byte), `double` (8 byte),  `boolean` (1 byte). Their default values are 0. When a primitive data type is stored, it is the stack that the values will be assigned. When a variable is copied then another copy of the variable is created and changes made to the copied variable will not reflect changes in the original variable. Primitive datatypes do not have null as default value
+* Non-primitive: created by the users in Java, i.e. `String` or `Integer` in above example. When the reference variables will be stored, the variable will be stored in the stack and the original object will be stored in the heap. In Object data type, although two copies will be created, they both will point to the same variable in the heap, hence changes made to any variable will reflect the change in both the variables. The default value for the reference variable is null
 
 If a reference of an object is an instance variable, that reference will be created in heap.
 
 A variable of one type can receive the value of another type. 
 * Variable of smaller capacity is be assigned to another variable of bigger capacity automatically
 * Variable of larger capacity is be assigned to another variable of smaller capacity if and only if you explicitly do Type Casting
+
+For example,
+```java
+double a = 1.2;
+int b = (int)a;
+```
+when print `b`, it shows `1`.
