@@ -21,7 +21,7 @@ class Variables_demo {
     void method (int var8, double var9) {
         boolean var10;
         Integer var11 = 11;
-        Integer var12 = new Integer(12);
+        Integer var12 = Integer.valueOf(12);;
     }
 }
 
