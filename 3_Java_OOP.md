@@ -137,7 +137,6 @@ Inheritance means creating new classes based on existing ones. A class that inhe
 ```java
 abstract class Vehicle {
     static boolean available = true;
-    static int max_speed;
     int current_speed = 0;
     abstract void go ();
     void stop () {
@@ -145,18 +144,14 @@ abstract class Vehicle {
     };
 }
 class Bike extends Vehicle {
-    static {
-        max_speed = 10;
-    }
+    static int max_speed = 10;
     void go () {
         System.out.println("Cycling and go");
         current_speed = 1;
     }
 }
 class Car extends Vehicle {
-    static {
-        max_speed = 100;
-    }
+    static int max_speed = 100;
     public void go() {
         System.out.println("Starting engine and go");
         current_speed = 10;
@@ -173,7 +168,6 @@ Polymorphism allow an action be execute in many ways. There are 2 types: overloa
 ```java
 abstract class Vehicle {
     static boolean available = true;
-    static int max_speed;
     int current_speed = 0;
     abstract void go ();
     void stop () {
@@ -181,9 +175,7 @@ abstract class Vehicle {
     };
 }
 class Car extends Vehicle {
-    static {
-        max_speed = 100;
-    }
+    static int max_speed = 100;
     public void go() { // override method from parrent class
         System.out.println("Starting engine and go");
         current_speed = 10;
@@ -215,17 +207,14 @@ Final is a concept that restrict user action, that means it is the final one, ca
 ```java
 abstract class Vehicle {
     static boolean available = true;
-    static int max_speed;
     int current_speed = 0;
     abstract void go ();
     final void stop () { // this method cannot be overriden
         current_speed = 0;
     };
 }
-class Car extends Vehicle {
-    static {
-        final max_speed = 100; // this variable has constant value
-    }
+final class Car extends Vehicle { // this class cannot be inherited
+    static final int max_speed = 100; // this variable has constant value
     public void go() {
         System.out.println("Starting engine and go");
         current_speed = 10;
