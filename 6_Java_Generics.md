@@ -109,7 +109,7 @@ Also you can have multiple boundaries, but it is not allow to have more than one
 ```
 
 ## Generics Wildcards
-Wildcard, with notation of questionmark ```?```, represent an unknown type. Wildcard is a special generic type, used as type of parameters, fields or local variables, even return types; but never used as argument to generic method call, generic class object instantiation or supertype.
+Wildcard, with notation of questionmark `?`, represent an unknown type. Wildcard is a special generic type, used as type of parameters, fields or local variables, even return types; but never used as argument to generic method call, generic class object instantiation or supertype.
 ```java
 List<? super Integer> mylist1 = new ArrayList<>();
 mylist1.add(Integer.valueOf(3));
