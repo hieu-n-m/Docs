@@ -1,24 +1,27 @@
+import java.util.Scanner;
+
 public class Client {
-    String name;
-    int house;
-    String electric_meter_id;
+    private String name;
+    private int house;
+    private String electric_meter_id;
+    public Client() {
+    }
+    public String getElectric_meter_id() {
+        return electric_meter_id;
+    }
 
-    public Client(String name, int house, String electric_meter_id) {
+    public void inputClient () {
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Add new client:");
+        System.out.print("Insert name: ");
+        String name = scn.next();
+        System.out.print("Insert house: ");
+        int house = scn.nextInt();
+        System.out.print("Insert ID: ");
+        String id = scn.next();
         this.name = name;
         this.house = house;
-        this.electric_meter_id = electric_meter_id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setHouse(int house) {
-        this.house = house;
-    }
-
-    public void setElectric_meter_id(String electric_meter_id) {
-        this.electric_meter_id = electric_meter_id;
+        this.electric_meter_id = id;
     }
     @Override
     public String toString() {

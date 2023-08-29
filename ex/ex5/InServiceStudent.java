@@ -13,7 +13,7 @@ public class InServiceStudent extends Student{
         super(id, name, dob, year, entryScore, score);
         this.location = location;
     }
-    public void inputInfor() {
+    public void inputInfo() {
         super.inputInfo();
         Scanner scn = new Scanner(System.in);
         System.out.print("Insert location: ");

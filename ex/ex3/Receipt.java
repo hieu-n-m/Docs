@@ -1,17 +1,22 @@
+import java.util.Scanner;
+
 public class Receipt {
     Client client;
     int new_electric_meter_index;
     int old_electric_meter_index;
-    private int pay;
 
-    public Receipt(Client client, int new_electric_meter_index, int old_electric_meter_index) {
+    public Receipt(Client client) {
         this.client = client;
-        this.new_electric_meter_index = new_electric_meter_index;
-        this.old_electric_meter_index = old_electric_meter_index;
     }
     public int getPay() {
-        this.pay = (new_electric_meter_index - old_electric_meter_index) * 5;
-        return this.pay;
+        return (new_electric_meter_index - old_electric_meter_index) * 5;
+    }
+    public void inputReceipt() {
+        Scanner scn = new Scanner(System.in);
+        System.out.print("Insert new electric meter index: ");
+        this.new_electric_meter_index = scn.nextInt();
+        System.out.print("Insert old electric meter index: ");
+        this.old_electric_meter_index = scn.nextInt();
     }
 
     @Override

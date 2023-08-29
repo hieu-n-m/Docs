@@ -11,29 +11,36 @@ public class Department {
         this.name = name;
         this.studentList = new ArrayList<>();
     }
-
-    public Department(String name, List<Student> studentList) {
-        this.name = name;
-        this.studentList = studentList;
-    }
     public void addNewStudent () {
         try {
             Scanner scn = new Scanner(System.in);
             do {
                 System.out.print("In-service Student? - ");
-                Student t = null;
                 if (scn.nextBoolean()) {
-                    t = new Student();
+                    InServiceStudent ISt = new InServiceStudent();
+                    ISt.inputInfo();
+                    studentList.add(ISt);
                 }
                 else {
-                    t = new InServiceStudent();
+                    Student t = new Student();
+                    t.inputInfo();
+                    studentList.add(t);
                 }
-                t.inputInfo();
-                studentList.add(t);
                 System.out.print("Continue? - ");
             } while (scn.nextBoolean());
         } catch (Exception e) {
             System.out.println("Invalid value");
+        }
+    }
+    public Student getStudentByID (String id) {
+        if (!(studentList.isEmpty())) {
+            return studentList.stream()
+                    .filter(c -> c.id.equals(id))
+                    .findFirst()
+                    .orElse(null);
+        }
+        else {
+            return null;
         }
     }
     public boolean isFormal(Student t) {
@@ -46,19 +53,24 @@ public class Department {
         if (studentList.isEmpty()) {
             return null;
         }
-        return studentList.stream().max(new Comparator<Student>() {
-            @Override
-            public int compare(Student o1, Student o2) {
-                return Float.compare(o1.entryScore, o2.entryScore);
-            }
-        }).get();
+        return studentList.stream().max((o1, o2) -> Float.compare(o1.entryScore, o2.entryScore)).get();
     }
-    public void printListInService () {
+    public void printListInServiceBy (String location) {
         if (studentList.isEmpty()) {
             System.out.println("List Empty");
         }
+        else if (studentList.stream()
+                .filter(Predicate.not(this::isFormal))
+                .map(s -> (InServiceStudent) s)
+                .anyMatch(s->s.location.equals(location))){
+            studentList.stream()
+                    .filter(Predicate.not(this::isFormal))
+                    .map(s -> (InServiceStudent) s)
+                    .filter(s->s.location.equals(location))
+                    .forEach(System.out::println);
+        }
         else {
-            studentList.stream().filter(Predicate.not(this::isFormal)).forEach(System.out::println);
+            System.out.println("Not found");
         }
     }
     public void printGoodStudent () {
@@ -84,14 +96,11 @@ public class Department {
         else if (studentList.stream().anyMatch(Predicate.not(s -> s.score.isEmpty()))) {
             return studentList.stream()
                     .filter(Predicate.not(s -> s.score.isEmpty()))
-                    .max(new Comparator<Student>() {
-                        @Override
-                        public int compare(Student s1, Student s2) {
-                            float s1Max = s1.getSemesterScore().stream().max(Float::compareTo).get();
-                            float s2Max = s2.getSemesterScore().stream().max(Float::compareTo).get();
-                            return Float.compare(s1Max, s2Max);
-                        }
-                    }).get();
+                    .max((s1, s2) -> {
+                        float s1Max = s1.getSemesterScore().stream().max(Float::compareTo).orElse(null);
+                        float s2Max = s2.getSemesterScore().stream().max(Float::compareTo).orElse(null);
+                        return Float.compare(s1Max, s2Max);
+                    }).orElse(null);
         }
         else {
             return null;
@@ -103,8 +112,8 @@ public class Department {
             return null;
         }
         else {
-            Comparator<Student> comparator = Comparator.comparing(s -> s.year);
-            comparator = comparator.thenComparing(Comparator.comparing(s -> s.entryScore));
+            Comparator<Student> comparator = Comparator.comparing(s -> s.year, Comparator.reverseOrder());
+            comparator = comparator.thenComparing(s -> s.entryScore);
             return studentList.stream().sorted(comparator).collect(Collectors.toList());
         }
     }

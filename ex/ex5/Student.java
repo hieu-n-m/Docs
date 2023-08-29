@@ -40,7 +40,7 @@ public class Student {
             day = df.parse(scn.next());
         }
         catch (ParseException e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
         System.out.print("Insert start year: ");
         Year year = Year.of(scn.nextInt());
@@ -54,7 +54,7 @@ public class Student {
                     case 1:
                         System.out.print("Add new semester: ");
                         String semester = scn.next();
-                        System.out.println("Average score: ");
+                        System.out.print("Average score: ");
                         Float avgScore = scn.nextFloat();
                         list.put(semester, avgScore);
                         break;
@@ -72,15 +72,6 @@ public class Student {
         this.year = year;
         this.entryScore = entryScore;
         this.score = list;
-        System.out.println("New student recorded");
-    }
-
-    public Year getYear() {
-        return year;
-    }
-
-    public float getEntryScore() {
-        return entryScore;
     }
 
     public Collection<Float> getSemesterScore () {
@@ -89,18 +80,19 @@ public class Student {
         }
         return score.values();
     }
-    public float getAvgScoreBySemester (String semester) {
+    public void getAvgScoreBySemester (String semester) {
         try {
             if (!(this.score.isEmpty()) && this.score.containsKey(semester)) {
-                return this.score.get(semester);
+                System.out.println(this.score.get(semester));
             }
             else {
                 throw new Exception("Invalid value");
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return -1;
+
     }
 
     @Override

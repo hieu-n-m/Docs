@@ -1,7 +1,4 @@
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class Manager {
     HashSet<Person> clients;
@@ -10,7 +7,7 @@ public class Manager {
     }
     public void addClient (Person p) {
         try {
-            if (clients.stream().filter(c-> c.id.equals(p.id)).findAny().isPresent()) {
+            if (clients.stream().anyMatch(c-> c.id.equals(p.id))) {
                 throw new Exception("ID already exists");
             }
             else {
@@ -24,7 +21,7 @@ public class Manager {
     }
     public Person getClientById (String id) {
         if (!(clients.isEmpty())) {
-            return clients.stream().filter(c -> c.id.equals(id)).findFirst().get();
+            return clients.stream().filter(c -> c.id.equals(id)).findFirst().orElse(null);
         }
         else {
             return null;
@@ -35,10 +32,10 @@ public class Manager {
     }
     @Override
     public String toString () {
-        String list = "";
+        StringBuilder list = new StringBuilder();
         for (Person client : clients) {
-            list += client.toString() + "\n";
+            list.append(client.toString()).append("\n");
         }
-        return list;
+        return list.toString();
     }
 }
