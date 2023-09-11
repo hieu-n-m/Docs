@@ -115,6 +115,6 @@ Console.WriteLine(num);  // 44
 * `in` specifies that this parameter is passed by reference but is only read by the called method. It is like the `ref` or `out` keywords, except that in arguments cannot be modified by the called method
 
 ## Arrays
-[Read here][https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/arrays]
+[Read here](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/arrays)
 
 ## Stack, Heap and Garbage Collector
