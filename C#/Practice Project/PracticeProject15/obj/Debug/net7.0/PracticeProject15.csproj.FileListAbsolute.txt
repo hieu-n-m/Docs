@@ -1,0 +1,14 @@
+D:\VS\PracticeProject15\bin\Debug\net7.0\PracticeProject15.exe
+D:\VS\PracticeProject15\bin\Debug\net7.0\PracticeProject15.deps.json
+D:\VS\PracticeProject15\bin\Debug\net7.0\PracticeProject15.runtimeconfig.json
+D:\VS\PracticeProject15\bin\Debug\net7.0\PracticeProject15.dll
+D:\VS\PracticeProject15\bin\Debug\net7.0\PracticeProject15.pdb
+D:\VS\PracticeProject15\obj\Debug\net7.0\PracticeProject15.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS\PracticeProject15\obj\Debug\net7.0\PracticeProject15.AssemblyInfoInputs.cache
+D:\VS\PracticeProject15\obj\Debug\net7.0\PracticeProject15.AssemblyInfo.cs
+D:\VS\PracticeProject15\obj\Debug\net7.0\PracticeProject15.csproj.CoreCompileInputs.cache
+D:\VS\PracticeProject15\obj\Debug\net7.0\PracticeProject15.dll
+D:\VS\PracticeProject15\obj\Debug\net7.0\refint\PracticeProject15.dll
+D:\VS\PracticeProject15\obj\Debug\net7.0\PracticeProject15.pdb
+D:\VS\PracticeProject15\obj\Debug\net7.0\PracticeProject15.genruntimeconfig.cache
+D:\VS\PracticeProject15\obj\Debug\net7.0\ref\PracticeProject15.dll

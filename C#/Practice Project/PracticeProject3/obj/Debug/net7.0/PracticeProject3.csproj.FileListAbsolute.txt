@@ -1,0 +1,14 @@
+D:\VS\PracticeProject3\bin\Debug\net7.0\PracticeProject3.exe
+D:\VS\PracticeProject3\bin\Debug\net7.0\PracticeProject3.deps.json
+D:\VS\PracticeProject3\bin\Debug\net7.0\PracticeProject3.runtimeconfig.json
+D:\VS\PracticeProject3\bin\Debug\net7.0\PracticeProject3.dll
+D:\VS\PracticeProject3\bin\Debug\net7.0\PracticeProject3.pdb
+D:\VS\PracticeProject3\obj\Debug\net7.0\PracticeProject3.GeneratedMSBuildEditorConfig.editorconfig
+D:\VS\PracticeProject3\obj\Debug\net7.0\PracticeProject3.AssemblyInfoInputs.cache
+D:\VS\PracticeProject3\obj\Debug\net7.0\PracticeProject3.AssemblyInfo.cs
+D:\VS\PracticeProject3\obj\Debug\net7.0\PracticeProject3.csproj.CoreCompileInputs.cache
+D:\VS\PracticeProject3\obj\Debug\net7.0\PracticeProject3.dll
+D:\VS\PracticeProject3\obj\Debug\net7.0\refint\PracticeProject3.dll
+D:\VS\PracticeProject3\obj\Debug\net7.0\PracticeProject3.pdb
+D:\VS\PracticeProject3\obj\Debug\net7.0\PracticeProject3.genruntimeconfig.cache
+D:\VS\PracticeProject3\obj\Debug\net7.0\ref\PracticeProject3.dll
